@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Education</h2>
+<form method="POST">
+    <input type="text" name="degree" placeholder="Degree" required>
+    <input type="text" name="institution" placeholder="Institution" required>
+    <input type="number" name="year_completed" placeholder="Year Completed" required>
+    <button type="submit">Add</button>
+</form>
+<ul>
+    {% for edu in educations %}
+    <li>
+        {{ edu.degree }} at {{ edu.institution }} ({{ edu.year_completed }})
+        <form method="POST" action="{{ url_for('delete_education', id=edu.id) }}">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+

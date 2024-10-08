@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to My CV</h2>
+    <p>This is a dynamic website showcasing my skills, education, and experience.</p>
+    <a href="{{ url_for('personal_info') }}" class="btn">Get Started</a>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <h3>Personal Info</h3>
+        <p>Learn more about me, my contact details, and a brief bio.</p>
+    </div>
+    <div class="feature">
+        <h3>Education</h3>
+        <p>Discover my educational background and qualifications.</p>
+    </div>
+    <div class="feature">
+        <h3>Work Experience</h3>
+        <p>Explore my professional journey and previous roles.</p>
+    </div>
+    <div class="feature">
+        <h3>Skills</h3>
+        <p>Check out the skills I have acquired over the years.</p>
+    </div>
+    <div class="feature">
+        <h3>Projects</h3>
+        <p>View significant projects I've worked on and contributed to.</p>
+    </div>
+    <div class="feature">
+        <h3>Contact</h3>
+        <p>Get in touch with me for collaborations or inquiries.</p>
+    </div>
+</div>
+{% endblock %}
+
+

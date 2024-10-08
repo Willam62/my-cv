@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Personal Information</h2>
+<form method="POST">
+    <input type="text" name="name" placeholder="Name" required value="{{ info.name if info else '' }}">
+    <input type="email" name="email" placeholder="Email" required value="{{ info.email if info else '' }}">
+    <textarea name="bio" placeholder="Short Bio">{{ info.bio if info else '' }}</textarea>
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
+
